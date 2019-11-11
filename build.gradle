@@ -10,7 +10,7 @@ buildscript {
   ext.target_sdk = 29
   ext.min_sdk = 21
 
-  ext.application_id = 'online.personaapp'
+  ext.application_id = 'com.examples'
   ext.version_name = '1.0'
   ext.version_code = 1
   ext.test_runner = 'android.support.test.runner.AndroidJUnitRunner'
@@ -55,6 +55,6 @@ task deployDebug(type: Exec, dependsOn: 'app:installDebug') {
     def sdkDir = properties.getProperty('sdk.dir')
     def adb = "$sdkDir/platform-tools/adb"
     commandLine "$adb", 'shell', 'am', 'start',
-        '-n', 'online.personaapp/online.personaapp.core.presentation.navigation.RouteActivity'
+        '-n', 'com.examples/com.examples.core.presentation.navigation.RouteActivity'
   }
 }

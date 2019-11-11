@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:tools="http://schemas.android.com/tools"
-		package="online.personaapp">
+		package="com.examples">
 
 	<!--Permissions-->
 	<uses-permission android:name="android.permission.INTERNET" />
@@ -9,7 +9,7 @@
 
 	<!--Application-->
 	<application
-			android:name="online.personaapp.PersonaApplication"
+			android:name="com.examples.PersonaApplication"
 			android:allowBackup="true"
 			android:icon="@mipmap/ic_launcher"
 			android:label="@string/app_name"
@@ -19,7 +19,7 @@
 
 		<!--Activities-->
 		<activity
-				android:name="online.personaapp.core.presentation.RouteActivity"
+				android:name="com.examples.core.presentation.RouteActivity"
 				android:noHistory="true"
 				android:theme="@style/AppTheme.Translucent">
 			<intent-filter>
@@ -29,17 +29,17 @@
 		</activity>
 
 		<activity
-				android:name="online.personaapp.auth.presentation.LoginActivity"
-				android:label="@string/login_screen_title"></activity>
+				android:name="com.examples.auth.presentation.LoginActivity"
+				android:label="@string/login_screen_title" />
 
 		<activity
-				android:name="online.personaapp.movies.presentation.view.MoviesActivity"
-				android:label="@string/movies_screen_title"></activity>
+				android:name="com.examples.movies.presentation.view.MoviesActivity"
+				android:label="@string/movies_screen_title" />
 
 		<activity
-				android:name="online.personaapp.movies.presentation.view.MovieDetailsActivity"
+				android:name="com.examples.movies.presentation.view.MovieDetailsActivity"
 				android:label="@string/movie_details_screen_title"
-				android:theme="@style/AppTheme.Translucent"></activity>
+				android:theme="@style/AppTheme.Translucent" />
 
 	</application>
 
