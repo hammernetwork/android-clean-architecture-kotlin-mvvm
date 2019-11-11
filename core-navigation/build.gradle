@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../library-config.gradle'
+apply from: '../build-config.gradle'
+
+dependencies {
+  def applicationDependencies = rootProject.ext.mainApplication
+  def unitTestDependencies = rootProject.ext.unitTesting
+  def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+  def developmentDependencies = rootProject.ext.development
+
+  //Compile time dependencies
+
+  //Application dependencies
+  implementation applicationDependencies.kotlin
+
+  //Unit/Integration tests dependencies
+  testImplementation unitTestDependencies.kotlin
+  testImplementation unitTestDependencies.kotlinTest
+  testImplementation unitTestDependencies.junit
+
+  //Inner dependencies}
+}

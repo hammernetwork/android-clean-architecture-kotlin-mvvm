@@ -1,0 +1,9 @@
+include ':app',
+    ':movies-api',
+    ':core',
+    ':core-network',
+    ':movies-data',
+    ':movies-domain',
+    ':core-navigation',
+    ':movies-presentation',
+    ':auth-presentation'

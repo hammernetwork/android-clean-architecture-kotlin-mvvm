@@ -1,0 +1,40 @@
+android {
+  def config = rootProject.extensions.getByName("ext")
+
+  compileSdkVersion config["compile_sdk"]
+  buildToolsVersion config["build_tools"]
+
+  defaultConfig {
+    applicationId config["application_id"]
+    minSdkVersion config["min_sdk"]
+    targetSdkVersion config["target_sdk"]
+    versionCode config["version_code"]
+    versionName config["version_name"]
+    testInstrumentationRunner config["test_runner"]
+  }
+
+  packagingOptions {
+    exclude 'LICENSE.txt'
+    exclude 'META-INF/DEPENDENCIES'
+    exclude 'META-INF/ASL2.0'
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/LICENSE'
+  }
+
+  lintOptions {
+    quiet true
+    abortOnError false
+    ignoreWarnings true
+    disable 'InvalidPackage' //Some libraries have issues with this.
+    disable 'OldTargetApi' //Lint gives this warning but SDK 20 would be Android L Beta.
+    disable 'IconDensities' //For testing purpose. This is safe to remove.
+    disable 'IconMissingDensityFolder' //For testing purpose. This is safe to remove.
+  }
+
+  sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+    main.java.srcDirs += [file("$buildDir/generated/source/kapt/main")]
+    test.java.srcDirs += 'src/test/kotlin'
+    androidTest.java.srcDirs += 'src/androidTest/kotlin'
+  }
+}

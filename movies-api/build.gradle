@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+apply from: '../library-config.gradle'
+apply from: '../build-config.gradle'
+
+dependencies {
+  def applicationDependencies = rootProject.ext.mainApplication
+  def unitTestDependencies = rootProject.ext.unitTesting
+  def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+  def developmentDependencies = rootProject.ext.development
+
+  //Compile time dependencies
+  kapt applicationDependencies.daggerCompiler
+
+  //Application dependencies
+  implementation applicationDependencies.kotlin
+  implementation applicationDependencies.dagger
+  implementation applicationDependencies.retrofit
+
+  //Unit/Integration tests dependencies
+  testImplementation unitTestDependencies.kotlin
+  testImplementation unitTestDependencies.kotlinTest
+  testImplementation unitTestDependencies.junit
+
+  //Inner dependencies
+  implementation project(path: ':core')
+  implementation project(path: ':core-network')
+  implementation project(path: ':movies-data')
+  implementation project(path: ':movies-domain')
+}

@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: '../default-config.gradle'
+apply from: '../signing-config.gradle'
+apply from: '../build-config.gradle'
+
+dependencies {
+  def applicationDependencies = rootProject.ext.mainApplication
+  def unitTestDependencies = rootProject.ext.unitTesting
+  def acceptanceTestDependencies = rootProject.ext.acceptanceTesting
+  def developmentDependencies = rootProject.ext.development
+
+  //Compile time dependencies
+  kapt applicationDependencies.daggerCompiler
+
+  //Application dependencies
+  implementation applicationDependencies.kotlin
+  implementation applicationDependencies.appCompat
+  implementation applicationDependencies.ktx
+  implementation applicationDependencies.constraintLayout
+  implementation applicationDependencies.dagger
+
+  //Inner dependencies
+  implementation project(path: ':core')
+  implementation project(path: ':core-network')
+  implementation project(path: ':core-navigation')
+  implementation project(path: ':auth-presentation')
+  implementation project(path: ':movies-presentation')
+  implementation project(path: ':movies-api')
+
+  //Unit/Integration tests dependencies
+  testImplementation unitTestDependencies.kotlin
+  testImplementation unitTestDependencies.kotlinTest
+  testImplementation unitTestDependencies.robolectric
+  testImplementation unitTestDependencies.junit
+  testImplementation unitTestDependencies.mockito
+  testImplementation unitTestDependencies.kluent
+
+  //Acceptance tests dependencies
+  androidTestImplementation acceptanceTestDependencies.testRunner
+  androidTestImplementation acceptanceTestDependencies.testRules
+  androidTestImplementation acceptanceTestDependencies.espressoCore
+  androidTestImplementation acceptanceTestDependencies.espressoIntents
+  androidTestImplementation acceptanceTestDependencies.androidAnnotations
+
+  //Development dependencies
+  debugImplementation developmentDependencies.leakCanary
+  releaseImplementation developmentDependencies.leakCanaryNoop
+  testImplementation developmentDependencies.leakCanaryNoop
+}
