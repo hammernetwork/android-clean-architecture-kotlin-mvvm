@@ -54,11 +54,11 @@ Here are some useful Gradle/adb commands for executing this example:
  * `./gradlew runUnitTests` - Execute all unit tests (both unit and integration).
 
 ## Discussions
-Refer to the issues section: https://github.com/android10/Android-CleanArchitecture-Kotlin/issues
+Refer to the issues section: https://github.com/hammerdinner/android-clean-architecture-kotlin-mvvm/issues
 
 ## Code style
 Here you can download and install the java codestyle.
-https://github.com/android10/java-code-styles
+https://github.com/hammerdinner/java-code-styles
 
 ## License
 
