@@ -8,7 +8,7 @@ The purpose of this repo is to follow up Clean Architecture principles by bringi
 
 ## Android - Clean Architecture - Java:
 There is another Android Clean Architecture repository written in Java: https://github.com/android10/Android-CleanArchitecture with really nice discussions: https://github.com/android10/Android-CleanArchitecture/issues.
-Article, lessons learned and some more material coming up. Check the following known bugs and TODO list. 
+Article, lessons learned and some more material coming up. Check the following known bugs and TODO list.
 
 ## Other material worth reading:
 
@@ -37,12 +37,12 @@ Article, lessons learned and some more material coming up. Check the following k
 
 ### ----------------------------------------------------------------------------------------------
 
-## UI Layer: MVVM 
+## UI Layer: MVVM
 ![https://fernandocejas.com/2018/05/07/architecting-android-reloaded/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture-Kotlin/architecture/clean_architecture_reloaded_mvvm_app.png)
 
 ### ----------------------------------------------------------------------------------------------
 
-## Data Layer: Repository 
+## Data Layer: Repository
 ![https://fernandocejas.com/2018/05/07/architecting-android-reloaded/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture-Kotlin/architecture/clean_archictecture_reloaded_repository.png)
 
 ### ----------------------------------------------------------------------------------------------
@@ -52,10 +52,10 @@ Here are some useful Gradle/adb commands for executing this example:
 
  * `./gradlew deployDebug` - Builds and install the debug apk on the current connected device.
  * `./gradlew runUnitTests` - Execute all unit tests (both unit and integration).
- 
+
 ## Discussions
 Refer to the issues section: https://github.com/android10/Android-CleanArchitecture-Kotlin/issues
- 
+
 ## Code style
 Here you can download and install the java codestyle.
 https://github.com/android10/java-code-styles
