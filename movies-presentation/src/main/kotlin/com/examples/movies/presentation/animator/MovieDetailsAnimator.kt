@@ -9,7 +9,6 @@ import androidx.interpolator.view.animation.FastOutSlowInInterpolator
 import com.examples.core.extension.cancelTransition
 import javax.inject.Inject
 
-
 class MovieDetailsAnimator
 @Inject constructor() {
 

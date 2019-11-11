@@ -17,7 +17,6 @@ import com.examples.movies.presentation.viewstate.MovieView
 import javax.inject.Inject
 import javax.inject.Singleton
 
-
 @Singleton
 class NavigatorImpl
 @Inject constructor(private val authenticator: Authenticator) : Navigator {

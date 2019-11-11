@@ -28,8 +28,7 @@ class MovieDetailsActivity : BaseActivity() {
   }
 
   override fun onCreate(savedInstanceState: Bundle?) {
-    initActivityComponentFactory(
-        MoviesComponentFactoryImpl(this))
+    initActivityComponentFactory(MoviesComponentFactoryImpl(this))
     super.onCreate(savedInstanceState)
   }
 

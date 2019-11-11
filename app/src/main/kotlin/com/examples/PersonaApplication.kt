@@ -13,8 +13,7 @@ class PersonaApplication : Application() {
   }
 
   private fun initializeInjector() {
-    com.examples.core.di.proxy.ComponentProxy.init(
-        ComponentFactoryImpl(this))
+    com.examples.core.di.proxy.ComponentProxy.init(ComponentFactoryImpl(this))
   }
 
   private fun initializeLeakDetection() {

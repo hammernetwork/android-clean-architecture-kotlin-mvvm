@@ -1,15 +1,15 @@
 package com.examples.core.di.module
 
 import android.content.Context
+import com.examples.core.di.scope.PerActivity
 import dagger.Module
 import dagger.Provides
-
 
 @Module
 class ActivityContextModule(private val context: Context) {
 
   @Provides
-  @com.examples.core.di.scope.PerActivity
+  @PerActivity
   fun provideContext(): Context = context
 
 }

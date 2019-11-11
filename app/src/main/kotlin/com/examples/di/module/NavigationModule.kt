@@ -5,7 +5,6 @@ import com.examples.core.presentation.navigation.NavigatorImpl
 import dagger.Binds
 import dagger.Module
 
-
 @Module
 interface NavigationModule {
 

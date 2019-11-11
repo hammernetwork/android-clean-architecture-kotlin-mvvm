@@ -10,10 +10,10 @@ object ComponentProxy {
 
   val componentMap: WeakHashMap<Class<*>, Any> = WeakHashMap()
 
-  lateinit var factory: com.examples.core.di.proxy.ComponentFactory
+  lateinit var factory: ComponentFactory
 
-  fun init(factory: com.examples.core.di.proxy.ComponentFactory) {
-    com.examples.core.di.proxy.ComponentProxy.factory = factory
+  fun init(factory: ComponentFactory) {
+    ComponentProxy.factory = factory
   }
 
   /**
@@ -21,11 +21,11 @@ object ComponentProxy {
    */
   inline fun <reified T> getComponent(): T {
     val clazz = T::class.java
-    if (!com.examples.core.di.proxy.ComponentProxy.componentMap.contains(clazz)) {
-      com.examples.core.di.proxy.ComponentProxy.componentMap[clazz] = com.examples.core.di.proxy.ComponentProxy.factory.createComponent(
+    if (!componentMap.contains(clazz)) {
+      componentMap[clazz] = factory.createComponent(
           clazz)
     }
-    return com.examples.core.di.proxy.ComponentProxy.componentMap[clazz] as T
+    return componentMap[clazz] as T
   }
 
 }

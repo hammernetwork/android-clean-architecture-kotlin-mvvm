@@ -2,19 +2,18 @@ package com.examples.movies.presentation.di.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.examples.core.di.viewmodel.ViewModelFactory
 import com.examples.movies.presentation.viewmodel.MovieDetailsViewModel
 import com.examples.movies.presentation.viewmodel.MoviesViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 
-
 @Module
 interface ViewModelModule {
 
   @Binds
-  fun bindViewModelFactory(
-      factory: com.examples.core.di.viewmodel.ViewModelFactory): ViewModelProvider.Factory
+  fun bindViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
 
   @Binds
   @IntoMap

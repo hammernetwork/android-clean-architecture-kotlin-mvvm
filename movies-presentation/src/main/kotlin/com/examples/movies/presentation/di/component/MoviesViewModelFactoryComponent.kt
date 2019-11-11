@@ -8,7 +8,6 @@ import dagger.Component
 import java.lang.ref.WeakReference
 import javax.inject.Singleton
 
-
 @Component(
     dependencies = [MoviesViewModelFactoryDependencies::class],
     modules = [ViewModelModule::class]

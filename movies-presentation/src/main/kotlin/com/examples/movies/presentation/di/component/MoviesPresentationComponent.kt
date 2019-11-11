@@ -1,6 +1,7 @@
 package com.examples.movies.presentation.di.component
 
 import android.content.Context
+import com.examples.core.di.scope.PerView
 import com.examples.core.presentation.navigation.di.api.NavigationComponentApi
 import com.examples.movies.presentation.di.api.MoviesViewModelFactoryComponentApi
 import com.examples.movies.presentation.di.dependencies.MoviesPresentationDependencies
@@ -13,7 +14,8 @@ import dagger.Component
  * Subtypes of ActivityComponent should be decorated with annotation:
  * [PerActivity]
  */
-@com.examples.core.di.scope.PerView
+
+@PerView
 @Component(
     dependencies = [MoviesPresentationDependencies::class]
 )
@@ -39,7 +41,7 @@ interface MoviesPresentationComponent {
     }
   }
 
-  @com.examples.core.di.scope.PerView
+  @PerView
   @Component(
       dependencies = [
         NavigationComponentApi::class,

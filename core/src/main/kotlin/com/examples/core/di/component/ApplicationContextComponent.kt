@@ -1,6 +1,8 @@
 package com.examples.core.di.component
 
 import android.app.Application
+import com.examples.core.di.api.ApplicationContextComponentApi
+import com.examples.core.di.module.ApplicationContextModule
 import dagger.Component
 import javax.inject.Singleton
 
@@ -8,12 +10,12 @@ import javax.inject.Singleton
  * Component for application context
  */
 @Singleton
-@Component(modules = [com.examples.core.di.module.ApplicationContextModule::class])
-interface ApplicationContextComponent : com.examples.core.di.api.ApplicationContextComponentApi {
+@Component(modules = [ApplicationContextModule::class])
+interface ApplicationContextComponent : ApplicationContextComponentApi {
 
   companion object {
     @Volatile
-    private lateinit var appContextComponent: com.examples.core.di.component.ApplicationContextComponent
+    private lateinit var appContextComponent: ApplicationContextComponent
 
     /**
      * Method for initialize component
@@ -23,22 +25,21 @@ interface ApplicationContextComponent : com.examples.core.di.api.ApplicationCont
         "AppContextComponent is already initialized."
       }
 
-      com.examples.core.di.component.ApplicationContextComponent.Companion.appContextComponent = DaggerApplicationContextComponent
+      appContextComponent = DaggerApplicationContextComponent
           .builder()
-          .applicationContextModule(
-              com.examples.core.di.module.ApplicationContextModule(application))
+          .applicationContextModule(ApplicationContextModule(application))
           .build()
     }
 
     /**
      * Before use get() call init(context)
      */
-    fun get(): com.examples.core.di.component.ApplicationContextComponent {
+    fun get(): ApplicationContextComponent {
       check(this::appContextComponent.isInitialized) {
         "AppContextComponent is not initialized yet. Call init first."
       }
 
-      return com.examples.core.di.component.ApplicationContextComponent.Companion.appContextComponent
+      return appContextComponent
     }
   }
 

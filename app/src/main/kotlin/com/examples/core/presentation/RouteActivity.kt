@@ -6,7 +6,6 @@ import com.examples.core.di.RouteActivityComponent
 import com.examples.core.presentation.navigation.Navigator
 import javax.inject.Inject
 
-
 class RouteActivity : AppCompatActivity() {
 
   private val component: RouteActivityComponent by lazy(mode = LazyThreadSafetyMode.NONE) {

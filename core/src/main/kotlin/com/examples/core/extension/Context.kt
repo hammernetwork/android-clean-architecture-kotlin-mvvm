@@ -6,7 +6,6 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 
-
 val Context.isConnected: Boolean
   get() {
     var result = false

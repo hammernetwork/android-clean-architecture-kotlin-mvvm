@@ -1,13 +1,15 @@
 package com.examples.movies.di
 
 import com.examples.core.di.NetworkComponentApi
+import com.examples.core.di.api.NetworkHandlerComponentApi
+import com.examples.core.di.scope.PerFeature
 import dagger.Component
 import java.lang.ref.WeakReference
 
 @Component(
     dependencies = [MoviesDependencies::class],
     modules = [MoviesRepositoryModule::class])
-@com.examples.core.di.scope.PerFeature
+@PerFeature
 interface MoviesComponent : MoviesComponentApi {
 
   companion object {
@@ -42,8 +44,8 @@ interface MoviesComponent : MoviesComponentApi {
   @Component(
       dependencies = [
         NetworkComponentApi::class,
-        com.examples.core.di.api.NetworkHandlerComponentApi::class
+        NetworkHandlerComponentApi::class
       ])
-  @com.examples.core.di.scope.PerFeature
+  @PerFeature
   interface MoviesDependenciesComponent : MoviesDependencies
 }

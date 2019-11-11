@@ -4,7 +4,6 @@ import android.os.Parcel
 import com.examples.core.platform.KParcelable
 import com.examples.core.platform.parcelableCreator
 
-
 data class MovieView(val id: Int, val poster: String) : KParcelable {
   companion object {
     const val PARCELABLE_KEY = "MovieViewKey"
