@@ -1,24 +1,17 @@
 ![banner](https://cdn.quoteload.com/quotes/mae-west-quote-its-hard-to-be-funny-when-you-have.jpeg)
 
 # Android - Clean Architecture - Kotlin [![Build Status](https://travis-ci.org/android10/Android-CleanArchitecture-Kotlin.svg?branch=master)](https://travis-ci.org/android10/Android-CleanArchitecture-Kotlin)
+Reworked based on [Architecting Android… Reloaded](https://fernandocejas.com/2018/05/07/architecting-android-reloaded/)
+
 The purpose of this repo is to follow up Clean Architecture principles by bringing them to Android. It is worth saying that the idea is to take advantage of the Kotlin Programming Language features plus also pull in lessons learned and ideas from other interesting aproaches like Functional Programming.
 
 ## Blog post with implementation details explanation:
 [Architecting Android… Reloaded](https://fernandocejas.com/2018/05/07/architecting-android-reloaded/)
 
-## Android - Clean Architecture - Java:
-There is another Android Clean Architecture repository written in Java: https://github.com/android10/Android-CleanArchitecture with really nice discussions: https://github.com/android10/Android-CleanArchitecture/issues.
-Article, lessons learned and some more material coming up. Check the following known bugs and TODO list.
-
 ## Other material worth reading:
-
 [Architecting Android…The clean way?](http://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/)
 
 [Architecting Android…The evolution](http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/)
-
-[Tasting Dagger 2 on Android](http://fernandocejas.com/2015/04/11/tasting-dagger-2-on-android/)
-
-[Clean Architecture…Dynamic Parameters in Use Cases](http://fernandocejas.com/2016/12/24/clean-architecture-dynamic-parameters-in-use-cases/)
 
 ### ----------------------------------------------------------------------------------------------
 
@@ -56,9 +49,9 @@ Here are some useful Gradle/adb commands for executing this example:
 ## Discussions
 Refer to the issues section: https://github.com/hammerdinner/android-clean-architecture-kotlin-mvvm/issues
 
-## Code style
-Here you can download and install the java codestyle.
-https://github.com/hammerdinner/java-code-styles
+//## Code style
+//Here you can download and install the java codestyle.
+//https://github.com/hammerdinner/java-code-styles
 
 ## License
 

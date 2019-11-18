@@ -27,7 +27,7 @@ ext {
 
   //Unit Testing
   robolectric_version = '4.3.1'
-  junit_version = '4.13-beta-3'
+  junit_version = '4.12'
   mockito_version = '1.4.0'
   kluent_version = '1.14'
 
