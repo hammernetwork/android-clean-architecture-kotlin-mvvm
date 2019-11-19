@@ -13,15 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.examples.features.movies
+package com.examples.movies.presentation.viewmodel
 
-import android.graphics.Movie
 import com.examples.AndroidTest
 import com.examples.core.functional.Either.Right
-import com.examples.features.movies.GetMovies
 import com.examples.movies.domain.interactor.GetMovies
 import com.examples.movies.domain.model.Movie
-import com.examples.movies.presentation.viewmodel.MoviesViewModel
 import com.nhaarman.mockito_kotlin.any
 import com.nhaarman.mockito_kotlin.eq
 import com.nhaarman.mockito_kotlin.given

@@ -25,6 +25,7 @@ dependencies {
   testImplementation unitTestDependencies.kotlin
   testImplementation unitTestDependencies.kotlinTest
   testImplementation unitTestDependencies.junit
+  testImplementation unitTestDependencies.mockito
 
   //Inner dependencies
   implementation project(path: ':core')

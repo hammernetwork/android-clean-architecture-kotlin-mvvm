@@ -13,24 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.examples.features.movies
+package com.examples.movies.data.repository
 
-import android.graphics.Movie
-import android.telecom.Call
 import com.examples.UnitTest
 import com.examples.core.exception.Failure.NetworkConnection
 import com.examples.core.exception.Failure.ServerError
 import com.examples.core.extension.empty
 import com.examples.core.functional.Either
 import com.examples.core.functional.Either.Right
+import com.examples.core.platform.NetworkHandler
 import com.examples.movies.data.entity.MovieDetailsEntity
 import com.examples.movies.data.entity.MovieEntity
 import com.examples.movies.data.network.MoviesService
-import com.examples.movies.data.repository.MoviesRepository.Network
+import com.examples.movies.domain.model.Movie
 import com.examples.movies.domain.model.MovieDetails
+import com.examples.movies.domain.repository.MoviesRepository
 import com.nhaarman.mockito_kotlin.given
 import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.verifyZeroInteractions
+import org.amshove.kluent.shouldBeInstanceOf
+import org.amshove.kluent.shouldEqual
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -42,7 +44,7 @@ class MoviesRepositoryTest : UnitTest() {
   private lateinit var networkRepository: MoviesRepository.Remote
 
   @Mock
-  private lateinit var networkHandler: com.examples.core.platform.NetworkHandler
+  private lateinit var networkHandler: NetworkHandler
   @Mock
   private lateinit var service: MoviesService
 
@@ -57,7 +59,7 @@ class MoviesRepositoryTest : UnitTest() {
 
   @Before
   fun setUp() {
-    networkRepository = Network(networkHandler, service)
+    networkRepository = MoviesRepositoryImpl(networkHandler, service)
   }
 
   @Test

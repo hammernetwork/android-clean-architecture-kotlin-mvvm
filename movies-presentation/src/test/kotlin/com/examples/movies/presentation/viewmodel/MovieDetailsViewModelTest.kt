@@ -13,14 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.examples.features.movies
+package com.examples.movies.presentation.viewmodel
 
 import com.examples.AndroidTest
 import com.examples.core.functional.Either.Right
-import com.examples.features.movies.GetMovieDetails
 import com.examples.movies.domain.interactor.GetMovieDetails
 import com.examples.movies.domain.model.MovieDetails
-import com.examples.movies.presentation.viewmodel.MovieDetailsViewModel
 import com.nhaarman.mockito_kotlin.any
 import com.nhaarman.mockito_kotlin.eq
 import com.nhaarman.mockito_kotlin.given
@@ -36,14 +34,11 @@ class MovieDetailsViewModelTest : AndroidTest() {
 
   @Mock
   private lateinit var getMovieDetails: GetMovieDetails
-  @Mock
-  private lateinit var playMovie: PlayMovie
 
   @Before
   fun setUp() {
     movieDetailsViewModel = MovieDetailsViewModel(
-        getMovieDetails,
-        playMovie)
+        getMovieDetails)
   }
 
   @Test

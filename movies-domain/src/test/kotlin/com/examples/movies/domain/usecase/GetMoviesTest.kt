@@ -13,14 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.examples.features.movies
+package com.examples.movies.domain.usecase
 
-import android.graphics.Movie
 import com.examples.UnitTest
 import com.examples.core.functional.Either.Right
-import com.examples.features.movies.GetMovies
 import com.examples.movies.domain.interactor.GetMovies
 import com.examples.movies.domain.model.Movie
+import com.examples.movies.domain.repository.MoviesRepository
 import com.nhaarman.mockito_kotlin.given
 import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.verifyNoMoreInteractions
@@ -34,7 +33,7 @@ class GetMoviesTest : UnitTest() {
   private lateinit var getMovies: GetMovies
 
   @Mock
-  private lateinit var moviesRepository: com.examples.movies.data.repository.MoviesRepository
+  private lateinit var moviesRepository: MoviesRepository.Remote
 
   @Before
   fun setUp() {

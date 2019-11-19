@@ -17,6 +17,7 @@ package com.examples
 
 import android.app.Application
 import android.content.Context
+import com.examples.core.BuildConfig
 import com.examples.core.platform.BaseActivity
 import org.junit.Rule
 import org.junit.runner.RunWith
@@ -32,7 +33,7 @@ import org.robolectric.annotation.Config
  * @see UnitTest
  */
 @RunWith(RobolectricTestRunner::class)
-@Config(constants = BuildConfig::class,
+@Config(//constants = BuildConfig::class,
     application = AndroidTest.ApplicationStub::class,
     sdk = [21])
 abstract class AndroidTest {

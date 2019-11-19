@@ -25,6 +25,11 @@ dependencies {
   testImplementation unitTestDependencies.kotlinTest
   testImplementation unitTestDependencies.junit
 
+//  testImplementation unitTestDependencies.robolectric
+  testImplementation unitTestDependencies.junit
+  testImplementation unitTestDependencies.mockito
+  testImplementation unitTestDependencies.kluent
+
   //Inner dependencies
   implementation project(path: ':core')
   implementation project(path: ':movies-domain')

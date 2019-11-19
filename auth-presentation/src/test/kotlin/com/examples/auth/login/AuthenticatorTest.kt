@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.examples.features.login
+package com.examples.auth.login
 
 import com.examples.UnitTest
 import com.examples.auth.presentation.Authenticator
