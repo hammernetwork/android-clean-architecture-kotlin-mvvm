@@ -18,7 +18,7 @@ package com.examples.core.presentation
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.examples.core.di.RouteActivityComponent
-import com.examples.core.presentation.navigation.Navigator
+import com.examples.presentation.navigation.Navigator
 import javax.inject.Inject
 
 class RouteActivity : AppCompatActivity() {

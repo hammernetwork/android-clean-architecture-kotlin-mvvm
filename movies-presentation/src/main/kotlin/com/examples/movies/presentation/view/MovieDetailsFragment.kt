@@ -23,7 +23,6 @@ import com.examples.core.exception.Failure
 import com.examples.core.extension.*
 import com.examples.core.platform.BaseActivity
 import com.examples.core.platform.BaseFragment
-import com.examples.core.presentation.navigation.Navigator
 import com.examples.movies.domain.interactor.MovieFailure
 import com.examples.movies.presentation.R
 import com.examples.movies.presentation.animator.MovieDetailsAnimator
@@ -31,6 +30,7 @@ import com.examples.movies.presentation.di.component.MovieDetailsPresentationCom
 import com.examples.movies.presentation.viewmodel.MovieDetailsViewModel
 import com.examples.movies.presentation.viewstate.MovieDetailsView
 import com.examples.movies.presentation.viewstate.MovieView
+import com.examples.presentation.navigation.Navigator
 import kotlinx.android.synthetic.main.fragment_movie_details.*
 import javax.inject.Inject
 

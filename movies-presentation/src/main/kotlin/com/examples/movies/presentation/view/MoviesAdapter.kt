@@ -20,9 +20,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.examples.core.extension.inflate
 import com.examples.core.extension.loadFromUrl
-import com.examples.core.presentation.navigation.Navigator
 import com.examples.movies.presentation.R
 import com.examples.movies.presentation.viewstate.MovieView
+import com.examples.presentation.navigation.Navigator
 import kotlinx.android.synthetic.main.row_movie.view.*
 import javax.inject.Inject
 import kotlin.properties.Delegates

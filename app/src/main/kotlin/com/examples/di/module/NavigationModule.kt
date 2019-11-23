@@ -15,8 +15,8 @@
  */
 package com.examples.di.module
 
-import com.examples.core.presentation.navigation.Navigator
-import com.examples.core.presentation.navigation.NavigatorImpl
+import com.examples.presentation.navigation.Navigator
+import com.examples.presentation.navigation.NavigatorImpl
 import dagger.Binds
 import dagger.Module
 

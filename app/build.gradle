@@ -40,6 +40,9 @@ dependencies {
   testImplementation unitTestDependencies.junit
   testImplementation unitTestDependencies.mockito
   testImplementation unitTestDependencies.kluent
+  testImplementation project(path: ':core-test')
+  testImplementation project(path: ':movies-domain')
+
 
   //Acceptance tests dependencies
   androidTestImplementation acceptanceTestDependencies.testRunner

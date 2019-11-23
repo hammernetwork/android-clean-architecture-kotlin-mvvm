@@ -15,7 +15,7 @@
  */
 package com.examples.movies.domain.usecase
 
-import com.examples.UnitTest
+import com.example.core.test.UnitTest
 import com.examples.core.functional.Either.Right
 import com.examples.movies.domain.interactor.GetMovieDetails
 import com.examples.movies.domain.model.MovieDetails

@@ -35,6 +35,7 @@ dependencies {
   testImplementation unitTestDependencies.robolectric
   testImplementation unitTestDependencies.mockito
   testImplementation unitTestDependencies.kluent
+  testImplementation project(path: ':core-test')
 
   //  testImplementation unitTestDependencies.kotlin
   //  testImplementation unitTestDependencies.kotlinTest

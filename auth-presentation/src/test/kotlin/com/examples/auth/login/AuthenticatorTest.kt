@@ -15,7 +15,7 @@
  */
 package com.examples.auth.login
 
-import com.examples.UnitTest
+import com.example.core.test.UnitTest
 import com.examples.auth.presentation.Authenticator
 import org.amshove.kluent.shouldBe
 import org.junit.Test

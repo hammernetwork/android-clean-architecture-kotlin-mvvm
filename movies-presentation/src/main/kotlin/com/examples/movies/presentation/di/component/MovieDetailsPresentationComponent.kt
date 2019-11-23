@@ -17,10 +17,10 @@ package com.examples.movies.presentation.di.component
 
 import android.content.Context
 import com.examples.core.di.scope.PerView
-import com.examples.core.presentation.navigation.di.api.NavigationComponentApi
 import com.examples.movies.presentation.di.api.MoviesViewModelFactoryComponentApi
 import com.examples.movies.presentation.di.dependencies.MovieDetailsPresentationDependencies
 import com.examples.movies.presentation.view.MovieDetailsFragment
+import com.examples.presentation.navigation.di.api.NavigationComponentApi
 import dagger.Component
 
 /**

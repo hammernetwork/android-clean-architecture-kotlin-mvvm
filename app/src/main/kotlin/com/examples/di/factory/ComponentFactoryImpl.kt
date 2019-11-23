@@ -22,10 +22,10 @@ import com.examples.core.di.api.ApplicationContextComponentApi
 import com.examples.core.di.component.ApplicationContextComponent
 import com.examples.core.di.component.NetworkHandlerComponent
 import com.examples.core.di.proxy.ComponentFactory
-import com.examples.core.presentation.navigation.di.api.NavigationComponentApi
 import com.examples.di.component.NavigationComponent
 import com.examples.movies.di.MoviesComponent
 import com.examples.movies.di.MoviesComponentApi
+import com.examples.presentation.navigation.di.api.NavigationComponentApi
 
 
 class ComponentFactoryImpl(application: Application) : ComponentFactory {

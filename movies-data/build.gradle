@@ -24,11 +24,9 @@ dependencies {
   testImplementation unitTestDependencies.kotlin
   testImplementation unitTestDependencies.kotlinTest
   testImplementation unitTestDependencies.junit
-
-//  testImplementation unitTestDependencies.robolectric
-  testImplementation unitTestDependencies.junit
   testImplementation unitTestDependencies.mockito
   testImplementation unitTestDependencies.kluent
+  testImplementation project(path: ':core-test')
 
   //Inner dependencies
   implementation project(path: ':core')

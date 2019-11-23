@@ -18,7 +18,7 @@ package com.examples.core.di
 import com.examples.core.di.proxy.ComponentProxy
 import com.examples.core.di.scope.PerView
 import com.examples.core.presentation.RouteActivity
-import com.examples.core.presentation.navigation.di.api.NavigationComponentApi
+import com.examples.presentation.navigation.di.api.NavigationComponentApi
 import dagger.Component
 
 /**

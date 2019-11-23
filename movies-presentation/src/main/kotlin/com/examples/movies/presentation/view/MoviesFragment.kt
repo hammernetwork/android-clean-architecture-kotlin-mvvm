@@ -24,12 +24,12 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.examples.core.exception.Failure
 import com.examples.core.extension.*
 import com.examples.core.platform.BaseFragment
-import com.examples.core.presentation.navigation.Navigator
 import com.examples.movies.domain.interactor.MovieFailure
 import com.examples.movies.presentation.R
 import com.examples.movies.presentation.di.component.MoviesPresentationComponent
 import com.examples.movies.presentation.viewmodel.MoviesViewModel
 import com.examples.movies.presentation.viewstate.MovieView
+import com.examples.presentation.navigation.Navigator
 import kotlinx.android.synthetic.main.fragment_movies.*
 import javax.inject.Inject
 

@@ -15,7 +15,7 @@
  */
 package com.examples.core.di
 
-import com.examples.core.presentation.navigation.Navigator
+import com.examples.presentation.navigation.Navigator
 
 interface RouteActivityDependencies {
   fun navigator(): Navigator

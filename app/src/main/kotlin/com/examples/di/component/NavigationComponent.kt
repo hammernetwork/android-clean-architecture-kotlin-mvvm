@@ -15,8 +15,8 @@
  */
 package com.examples.di.component
 
-import com.examples.core.presentation.navigation.di.api.NavigationComponentApi
 import com.examples.di.module.NavigationModule
+import com.examples.presentation.navigation.di.api.NavigationComponentApi
 import dagger.Component
 import javax.inject.Singleton
 
