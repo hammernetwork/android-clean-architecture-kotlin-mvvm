@@ -28,29 +28,6 @@ dependencies {
   implementation applicationDependencies.glide
   implementation applicationDependencies.design
 
-  //Unit/Integration tests dependencies
-  testImplementation unitTestDependencies.kotlin
-  testImplementation unitTestDependencies.kotlinTest
-  testImplementation unitTestDependencies.junit
-  testImplementation unitTestDependencies.robolectric
-  testImplementation unitTestDependencies.mockito
-  testImplementation unitTestDependencies.kluent
-  testImplementation project(path: ':core-test')
-
-  //  testImplementation unitTestDependencies.kotlin
-  //  testImplementation unitTestDependencies.kotlinTest
-  //  testImplementation unitTestDependencies.robolectric
-  //  testImplementation unitTestDependencies.junit
-  //  testImplementation unitTestDependencies.mockito
-  //  testImplementation unitTestDependencies.kluent
-  //
-  //  //Acceptance tests dependencies
-  //  androidTestImplementation acceptanceTestDependencies.testRunner
-  //  androidTestImplementation acceptanceTestDependencies.testRules
-  //  androidTestImplementation acceptanceTestDependencies.espressoCore
-  //  androidTestImplementation acceptanceTestDependencies.espressoIntents
-  //  androidTestImplementation acceptanceTestDependencies.androidAnnotations
-
   //Inner dependencies
   implementation project(path: ':core-network')
 }
