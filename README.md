@@ -1,9 +1,10 @@
 ![banner](https://cdn.quoteload.com/quotes/mae-west-quote-its-hard-to-be-funny-when-you-have.jpeg)
 
 # Android - Clean Architecture - Kotlin [![Build Status](https://travis-ci.org/android10/Android-CleanArchitecture-Kotlin.svg?branch=master)](https://travis-ci.org/android10/Android-CleanArchitecture-Kotlin)
-Reworked based on [Architecting Android… Reloaded](https://fernandocejas.com/2018/05/07/architecting-android-reloaded/)
+Forked and rework from [Architecting Android… Reloaded](https://fernandocejas.com/2018/05/07/architecting-android-reloaded/)
 
 The purpose of this repo is to follow up Clean Architecture principles by bringing them to Android. It is worth saying that the idea is to take advantage of the Kotlin Programming Language features plus also pull in lessons learned and ideas from other interesting aproaches like Functional Programming.
+Fernando Сejas's example is converted to a multi-module PBF project structure.
 
 ## Blog post with implementation details explanation:
 [Architecting Android… Reloaded](https://fernandocejas.com/2018/05/07/architecting-android-reloaded/)
@@ -47,11 +48,7 @@ Here are some useful Gradle/adb commands for executing this example:
  * `./gradlew runUnitTests` - Execute all unit tests (both unit and integration).
 
 ## Discussions
-Refer to the issues section: https://github.com/hammerdinner/android-clean-architecture-kotlin-mvvm/issues
-
-//## Code style
-//Here you can download and install the java codestyle.
-//https://github.com/hammerdinner/java-code-styles
+Refer to the issues section: https://github.com/hammernetwork/android-clean-architecture-kotlin-mvvm/issues
 
 ## License
 
