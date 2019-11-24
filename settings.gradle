@@ -1,4 +1,5 @@
-include ':app', ':core-test',
+include ':app',
+    ':core-test',
     ':movies-api',
     ':core',
     ':core-network',
