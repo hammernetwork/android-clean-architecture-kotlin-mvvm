@@ -16,6 +16,8 @@
 package com.examples.movies.presentation.di.component
 
 import android.content.Context
+import com.examples.core.di.proxy.ActivityComponentProxy
+import com.examples.core.di.proxy.ComponentProxy
 import com.examples.core.di.scope.PerView
 import com.examples.movies.presentation.di.api.MoviesViewModelFactoryComponentApi
 import com.examples.movies.presentation.di.dependencies.MovieDetailsPresentationDependencies
@@ -49,9 +51,8 @@ interface MovieDetailsPresentationComponent {
 
     private fun getDependencies(context: Context): MovieDetailsPresentationDependenciesComponent {
       return DaggerMovieDetailsPresentationComponent_MovieDetailsPresentationDependenciesComponent.builder()
-          .navigationComponentApi(com.examples.core.di.proxy.ComponentProxy.getComponent())
-          .moviesViewModelFactoryComponentApi(
-              com.examples.core.di.proxy.ActivityComponentProxy.getComponent(context))
+          .navigationComponentApi(ComponentProxy.getComponent())
+          .moviesViewModelFactoryComponentApi(ActivityComponentProxy.getComponent(context))
           .build()
     }
   }

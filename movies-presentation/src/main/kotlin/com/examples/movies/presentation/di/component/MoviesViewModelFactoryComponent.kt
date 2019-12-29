@@ -15,6 +15,7 @@
  */
 package com.examples.movies.presentation.di.component
 
+import com.examples.core.di.proxy.ComponentProxy
 import com.examples.movies.di.MoviesComponentApi
 import com.examples.movies.presentation.di.api.MoviesViewModelFactoryComponentApi
 import com.examples.movies.presentation.di.dependencies.MoviesViewModelFactoryDependencies
@@ -41,8 +42,7 @@ interface MoviesViewModelFactoryComponent : MoviesViewModelFactoryComponentApi {
           if (!this::componentWeak.isInitialized || componentWeak.get() == null) {
             val component = DaggerMoviesViewModelFactoryComponent
                 .builder()
-                .moviesViewModelFactoryDependencies(
-                    getDependencies())
+                .moviesViewModelFactoryDependencies(getDependencies())
                 .build()
             componentWeak = WeakReference(component)
           }
@@ -55,7 +55,7 @@ interface MoviesViewModelFactoryComponent : MoviesViewModelFactoryComponentApi {
     private fun getDependencies(): MoviesViewModelFactoryDependenciesComponent {
       return DaggerMoviesViewModelFactoryComponent_MoviesViewModelFactoryDependenciesComponent
           .builder()
-          .moviesComponentApi(com.examples.core.di.proxy.ComponentProxy.getComponent())
+          .moviesComponentApi(ComponentProxy.getComponent())
           .build()
     }
   }

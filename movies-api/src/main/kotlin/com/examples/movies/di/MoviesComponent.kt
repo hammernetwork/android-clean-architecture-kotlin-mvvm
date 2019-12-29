@@ -17,6 +17,7 @@ package com.examples.movies.di
 
 import com.examples.core.di.NetworkComponentApi
 import com.examples.core.di.api.NetworkHandlerComponentApi
+import com.examples.core.di.proxy.ComponentProxy
 import com.examples.core.di.scope.PerFeature
 import dagger.Component
 import java.lang.ref.WeakReference
@@ -36,8 +37,7 @@ interface MoviesComponent : MoviesComponentApi {
         synchronized(MoviesComponent::class) {
           if (!this::componentWeak.isInitialized || componentWeak.get() == null) {
             val component = DaggerMoviesComponent.builder()
-                .moviesDependencies(
-                    getDependencies())
+                .moviesDependencies(getDependencies())
                 .build()
             componentWeak = WeakReference(component)
           }
@@ -50,8 +50,8 @@ interface MoviesComponent : MoviesComponentApi {
     private fun getDependencies(): MoviesDependenciesComponent {
       return DaggerMoviesComponent_MoviesDependenciesComponent
           .builder()
-          .networkComponentApi(com.examples.core.di.proxy.ComponentProxy.getComponent())
-          .networkHandlerComponentApi(com.examples.core.di.proxy.ComponentProxy.getComponent())
+          .networkComponentApi(ComponentProxy.getComponent())
+          .networkHandlerComponentApi(ComponentProxy.getComponent())
           .build()
     }
   }
